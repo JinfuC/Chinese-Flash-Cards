@@ -115,6 +115,10 @@ class Window(Frame):
                     self.currentFront.destroy()
                     self.entry.destroy()
                     amount-=1
+                    #reappear of import button 
+                    self.importButton = Button(self, text="Import", borderwidth=2, height=3,
+                             width=6, command=self.uploadFile)
+                    self.importButton.place(x=350,y=330)
             #wrong answer
             else :
                  self.label.config(text="Sorry, but this is incorrect")
