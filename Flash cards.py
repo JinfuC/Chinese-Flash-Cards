@@ -111,6 +111,8 @@ class Window(Frame):
                 #every character was correct
                 else :
                     self.label.config(text="Every card has been used!")
+                    del frontside[characterPosition]
+                    del backside[characterPosition]
                     self.submitButton.destroy()
                     self.currentFront.destroy()
                     self.entry.destroy()
