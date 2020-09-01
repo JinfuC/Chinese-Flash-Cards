@@ -93,11 +93,11 @@ class Window(Frame):
             self.entry.delete(0, END)
             #if the character is inputted right
             if (inputString==backside[characterPosition]):
+                #remove that character and its answer from the list
+                del frontside[characterPosition]
+                del backside[characterPosition]
                 if (amount!=0):
                     self.label.config(text="This list has"+ " " + str(amount)+ " " +"characters remaining")
-                    #remove that character and its answer from the list
-                    del frontside[characterPosition]
-                    del backside[characterPosition]
                     amount-=1
                     #when theres only one character remaining randint does not work so select the first one
                     if amount==0:
@@ -111,8 +111,6 @@ class Window(Frame):
                 #every character was correct
                 else :
                     self.label.config(text="Every card has been used!")
-                    del frontside[characterPosition]
-                    del backside[characterPosition]
                     self.submitButton.destroy()
                     self.currentFront.destroy()
                     self.entry.destroy()
