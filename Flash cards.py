@@ -69,7 +69,7 @@ class Window(Frame):
         self.importButton.destroy()
         #display first character
         global characterPosition
-        characterPosition= randint(0,amount-1)
+        characterPosition= randint(0,amount)
         self.displayFront(frontside[characterPosition])
         #display submit entry
         self.entry=Entry(self)
@@ -105,7 +105,7 @@ class Window(Frame):
                         self.currentFront.config(text=frontside[characterPosition])
                     #otherwise choose a random character from the remaining ones
                     else:
-                        characterPosition= randint(0,amount-1)
+                        characterPosition= randint(0,amount)
                         self.currentFront.config(text=frontside[characterPosition])
                     self.entry.focus_set()
                 #every character was correct
