@@ -125,7 +125,7 @@ class Window(Frame):
         
     #function to display the first word of the card
     def displayFront(self,texts):
-        self.currentFront = Label(self, text=texts, font=("Times",20,"bold"))
+        self.currentFront = Label(self, text=texts, font=("Microsoft Yahei",20))
         self.currentFront.pack(side="top", fill="x", pady=10)
         
 root= Tk()
